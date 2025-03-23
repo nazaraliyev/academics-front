@@ -3,7 +3,7 @@ import "@/assets/styles/styles.scss";
 
 import React from "react";
 import { Poppins } from 'next/font/google';
-// import { Layout } from "@/components";
+import { Layout } from "@/components";
 import { MantineProvider } from "@mantine/core";
 import theme from "@/assets/theme";
 
@@ -22,8 +22,7 @@ export default function RootLayout(props: React.PropsWithChildren) {
     <html lang="en" className={`${poppins.variable}`}>
       <body  style={{ background: "var(--academic-background)" }}>
         <MantineProvider theme={theme} defaultColorScheme="light">
-          {/* <Layout>{props.children}</Layout> */}
-          {props.children}
+          <Layout>{props.children}</Layout>
         </MantineProvider>
       </body>
     </html>
