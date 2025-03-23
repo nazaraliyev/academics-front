@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { AppShell, Container, Stack } from "@mantine/core";
+import { Container } from "@mantine/core";
 import LayoutHeader from "./components/header";
 
 export default function Layout(props: React.PropsWithChildren) {

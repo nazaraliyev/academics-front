@@ -15,40 +15,37 @@ interface DataType {
 }
 export default function SectionGoal() {
   // States
-  const [announce, setAnnounce] = React.useState('Bilik sonsuzdur,\n bu gün hansını kəşf\n edəcəksən?');
   const [selected, setSelected] = React.useState<DataType | undefined>(undefined);
 
   // Refs
-  const height = React.useRef(window.innerHeight - 20 - 72 - 20 - 20).current;
+  const [height, setHeight] = React.useState(300);
+
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      setHeight(window.innerHeight - 20 - 72 - 20 - 20);
+    }
+  }, []);
 
   // Functions
   const onMouseEnter = (event: string) => () => setSelected(data.find((item) => item.id === event));
   const onMouseLeave = () => setSelected(undefined);
 
   return (
-    // <Grid h={height} p={20} align='stretch' bg={'var(--academic-white)'} className={cx('radius--xl', styles.container)}>
-    //   <Grid.Col span={7} h={'100%'}>
-    //     <Center h={'100%'}>
-    //       <Text>{announce}</Text>
-    //     </Center>
-    //   </Grid.Col>
-    //   <Grid.Col span={5} h={'100%'}>
-    //     <Stack gap={24} h={"100%"}>
-    //       {data.map((item, index) => (
-    //         <Card key={index} {...item} />
-    //       ))}
-    //     </Stack>
-    //   </Grid.Col>
-    // </Grid>
-    <motion.div initial={{ opacity: 0, }} animate={{ opacity: 1,}} transition={{ duration: 1 }} style={{ height }}>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }} style={{ height }}>
       <Grid h={'100%'} p={20} bg={selected ? selected.bgColor : 'var(--academic-white)'} className={cx('radius--xl', styles.container)}>
         <Grid.Col span={7} h={'100%'}>
-          <motion.div key={selected?.id} initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className={styles.motion}>
+          <motion.div
+            key={selected?.id}
+            initial={{ opacity: 0 }}
+            exit={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className={styles.motion}>
             {selected ? (
               <Image src={selected.img} alt={selected.title} width={400} height={400} className="img--contain" />
             ) : (
               <Text fw={600} fz={40} className="text--preline">
-                {announce}
+                Bilik sonsuzdur,\n bu gün hansını kəşf\n edəcəksən?
               </Text>
             )}
           </motion.div>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { ChevronIcon } from '@/assets/icons';
 import { Page } from '@/components';
-import { Anchor, Box, Breadcrumbs, Button, Center, Flex, Grid, Stack, Tabs, Text } from '@mantine/core';
+import { Anchor, Breadcrumbs, Button, Center, Flex, Grid, Stack, Tabs, Text } from '@mantine/core';
 import Image from 'next/image';
 
 export default function MaterialPage() {
@@ -78,7 +78,7 @@ const Content = () => {
                 was developed in just ten days!
               </p>
               <div style={{ display: 'flex', justifyContent: 'center', marginTop: 40, marginBottom: 40 }}>
-                <img src="/will_delete_3.png" alt="delete" width={233} height={233} />
+                <Image src="/will_delete_3.png" alt="delete" width={233} height={233} />
               </div>
               <p style={{ fontSize: 14 }}>
                 JavaScript is regarded as one of the most commonly-used programming language. It is used for both front-end and back-end development.

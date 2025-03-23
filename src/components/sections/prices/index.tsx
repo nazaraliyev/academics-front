@@ -20,6 +20,8 @@ export default function SectionPrices() {
   // Memos
   const prices = React.useMemo(() => data[selected], [selected]);
 
+  // Functions
+  const onChange = (event: any) => () => setSelected(event);
   return (
     <Stack gap={10}>
       <Text fz={32} fw={600}>
@@ -28,7 +30,7 @@ export default function SectionPrices() {
       <Stack p={32} gap={30} bg={'var(--academic-blue)'} className="radius--xl">
         <SegmentedControl
           data={options}
-          onChange={setSelected as any}
+          onChange={onChange}
           w={200}
           radius={30}
           bg={'var(--academic-white)'}
