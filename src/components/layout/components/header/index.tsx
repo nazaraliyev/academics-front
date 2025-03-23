@@ -62,7 +62,7 @@ const Search = () => {
 const Account = () => {
   return (
     <Button
-      rightSection={<ChevronIcon />}
+      rightSection={<ChevronIcon {...{width:16, height:16, color:"var(--academic-text)"}}/>}
       px={2}
       h={40}
       radius={20}

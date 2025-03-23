@@ -14,3 +14,5 @@ export { default as NotesIcon } from "./common/notes.svg";
 export { default as SaveIcon } from "./common/save.svg";
 export { default as SearchIcon } from "./common/search.svg";
 export { default as UserIcon } from "./common/user.svg";
+export { default as ArrowIcon } from "./common/arrow.svg";
+export { default as StarIcon } from "./common/star.svg";

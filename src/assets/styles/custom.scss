@@ -19,6 +19,18 @@
     }
 }
 
+.width{
+    &--full{
+        width: 100%;
+    }
+    &--half{
+        width: 50%;
+    }   
+    &--min{
+        width: min-content
+    }
+}
+
 .img{
     &--contain{
         object-fit: contain;
@@ -39,14 +51,44 @@
     }
 }
 
-.width{
-    &--full{
-        width: 100%;
+.flex{
+    &--shrink{
+        flex-shrink: 0;
     }
-    &--half{
-        width: 50%;
-    }   
-    &--min{
-        width: min-content
+}
+
+.overflow{
+    &--hidden{
+        overflow: hidden;
+    }
+}
+
+.rotate{
+    &--0{
+        transform: rotate(0deg);
+    }
+    &--45{
+        transform: rotate(45deg);
+    }
+    &--90{
+        transform: rotate(90deg);
+    }
+    &--135{
+        transform: rotate(135deg);
+    }
+    &--180{
+        transform: rotate(180deg);
+    }
+    &--225{
+        transform: rotate(225deg);
+    }
+    &--270{
+        transform: rotate(270deg);
+    }
+    &--315{
+        transform: rotate(315deg);
+    }
+    &--360{
+        transform: rotate(360deg);
     }
 }
