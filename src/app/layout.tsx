@@ -5,6 +5,7 @@ import React from "react";
 import { Poppins } from 'next/font/google';
 import { Layout } from "@/components";
 import { MantineProvider } from "@mantine/core";
+import theme from "@/assets/theme";
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -12,11 +13,15 @@ const poppins = Poppins({
   subsets: ['latin'],
 });
 
+export const metadata = {
+  title: "Akademik",
+  description: "Akademik",
+}
 export default function RootLayout(props: React.PropsWithChildren) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <body  style={{ background: "var(--academic-background)" }}>
-        <MantineProvider defaultColorScheme="light">
+        <MantineProvider theme={theme} defaultColorScheme="light">
           <Layout>{props.children}</Layout>
         </MantineProvider>
       </body>

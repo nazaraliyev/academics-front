@@ -1,0 +1,11 @@
+.tabs{
+
+}
+.tabs_list{
+    &::before{
+        display: none;
+    }
+}
+.tabs_tab{
+    border-bottom-width: 4px;
+}
