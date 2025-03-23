@@ -1,6 +1,2 @@
-@import './variables.scss';
-@import './custom.scss';
-
-*{
-    font-family: var(--font-poppins);
-}
+@use './variables.scss';
+@use './custom.scss';
