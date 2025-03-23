@@ -45,7 +45,7 @@ export default function SectionGoal() {
               <Image src={selected.img} alt={selected.title} width={400} height={400} className="img--contain" />
             ) : (
               <Text fw={600} fz={40} className="text--preline">
-                Bilik sonsuzdur,\n bu gün hansını kəşf\n edəcəksən?
+                {'Bilik sonsuzdur,\n bu gün hansını kəşf\n edəcəksən?'}
               </Text>
             )}
           </motion.div>
