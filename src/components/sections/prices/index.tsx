@@ -21,7 +21,7 @@ export default function SectionPrices() {
   const prices = React.useMemo(() => data[selected], [selected]);
 
   // Functions
-  const onChange = (event: any) => () => setSelected(event);
+  const onChange = (event: any) => setSelected(event);
   return (
     <Stack gap={10}>
       <Text fz={32} fw={600}>
