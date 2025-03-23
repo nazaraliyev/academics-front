@@ -21,9 +21,10 @@ export default function RootLayout(props: React.PropsWithChildren) {
   return (
     <html lang="en" className={`${poppins.variable}`}>
       <body  style={{ background: "var(--academic-background)" }}>
-        <MantineProvider theme={theme} defaultColorScheme="light">
+        {/* <MantineProvider theme={theme} defaultColorScheme="light">
           <Layout>{props.children}</Layout>
-        </MantineProvider>
+        </MantineProvider> */}
+        {props.children}
       </body>
     </html>
   );
