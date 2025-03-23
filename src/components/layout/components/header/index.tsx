@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import styles from "./styles.module.scss";
 import { Button, Center, Flex, Text, TextInput } from "@mantine/core";
