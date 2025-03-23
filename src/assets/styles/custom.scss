@@ -1,3 +1,52 @@
-html, body{
-    background-color: #fff;
+.radius{
+    &--xs{
+        border-radius: 4px;
+    }
+    &--sm{
+        border-radius: 8px;
+    }
+    &--md{
+        border-radius: 12px;
+    }
+    &--lg{
+        border-radius: 16px;
+    }
+    &--xl{
+        border-radius: 20px;
+    }
+    &--full{
+        border-radius: 50%;
+    }
+}
+
+.img{
+    &--contain{
+        object-fit: contain;
+    }
+    &--cover{
+        object-fit: cover;
+    }
+}
+.text{
+    &--preline{
+        white-space: pre-line;
+    }
+}
+
+.cursor{
+    &--pointer{
+        cursor: pointer;
+    }
+}
+
+.width{
+    &--full{
+        width: 100%;
+    }
+    &--half{
+        width: 50%;
+    }   
+    &--min{
+        width: min-content
+    }
 }

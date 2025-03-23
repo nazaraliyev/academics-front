@@ -1,21 +1,8 @@
-import styles from "./styles.module.scss";
-import { createTheme } from "@mantine/core";
+'use client';
+import { createTheme } from '@mantine/core';
+import styles from './theme.module.scss';
 
 const theme = createTheme({
-  fontFamily: "Poppins",
-  components: {
-    Button: {
-      classNames: {
-        root: styles.button,
-      },
-    },
-    Text: {
-      defaultProps: {
-        fz: 14,
-        c: "#fff",
-      },
-    },
-  },
+  fontFamily: 'var(--font-poppins)',
 });
-
 export default theme;
