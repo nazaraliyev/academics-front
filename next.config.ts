@@ -14,21 +14,25 @@ const nextConfig: NextConfig = {
       rule.test?.test?.(".svg")
     );
 
-    config.module.rules.push(
-      {
-        ...fileLoaderRule,
-        test: /\.svg$/i,
-        resourceQuery: /url/, // *.svg?url
-      },
-      {
-        test: /\.svg$/i,
-        issuer: fileLoaderRule.issuer,
-        resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
-        use: ["@svgr/webpack"],
-      }
-    );
+    if (fileLoaderRule) {
+      // URL isteyen SVG dosyaları için kural ekle
+      config.module.rules.push(
+        {
+          ...fileLoaderRule,
+          test: /\.svg$/i,
+          resourceQuery: /url/, // *.svg?url
+        },
+        {
+          test: /\.svg$/i,
+          issuer: fileLoaderRule.issuer,
+          resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
+          use: ["@svgr/webpack"],
+        }
+      );
 
-    fileLoaderRule.exclude = /\.svg$/i;
+      // SVG dosyalarını fileLoaderRule'dan dışla
+      fileLoaderRule.exclude = /\.svg$/i;
+    }
 
     return config;
   },
