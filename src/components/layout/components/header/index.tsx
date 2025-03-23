@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import { Button, Center, Flex, Text, TextInput } from "@mantine/core";
 import { Logo } from "@/components";
-import { ChevronIcon, SearchIcon, UserIcon } from "@/assets/icons";
+// import { ChevronIcon, SearchIcon, UserIcon } from "@/assets/icons";
 
 export default function LayoutHeader() {
   return (
@@ -48,7 +48,7 @@ const Menu = () => {
 const Search = () => {
   return (
     <TextInput
-      leftSection={<SearchIcon />}
+      // leftSection={<SearchIcon />}
       radius={20}
       readOnly
       placeholder="Axtarış"
@@ -63,7 +63,7 @@ const Search = () => {
 const Account = () => {
   return (
     <Button
-      rightSection={<ChevronIcon {...{width:16, height:16, color:"var(--academic-text)"}}/>}
+      // rightSection={<ChevronIcon {...{width:16, height:16, color:"var(--academic-text)"}}/>}
       px={2}
       h={40}
       radius={20}
@@ -75,7 +75,7 @@ const Account = () => {
         h={32}
         bg={"var(--academic-primary)"}
       >
-        <UserIcon />
+        {/* <UserIcon /> */}
       </Center>
     </Button>
   );
