@@ -3,9 +3,6 @@ import "@/assets/styles/styles.scss";
 
 import React from "react";
 import { Poppins } from 'next/font/google';
-import { Layout } from "@/components";
-import { MantineProvider } from "@mantine/core";
-import theme from "@/assets/theme";
 
 const poppins = Poppins({
   variable: '--font-poppins',
